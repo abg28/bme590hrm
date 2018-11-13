@@ -119,8 +119,8 @@ def interpolate(times, voltages, time_interp_indices, voltage_interp_indices):
                 # Interpolates times data
                 new_times.append(times[index - 1] + (times[index + 1] -
                                  times[index - 1]) * (voltages[index] -
-                                 voltages[index - 1]) / (voltages[index + 1]
-                                 - voltages[index - 1]))
+                                 voltages[index - 1]) / (voltages[index + 1] -
+                                                         voltages[index - 1]))
             else:
                 new_times.append(times[index])
             if index in voltage_interp_indices:
