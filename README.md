@@ -36,3 +36,6 @@ The program reads in a csv file with two columns, the first representing time an
 Once the data is cleaned up, the metrics listed above are then calculated.  The driver of this process is a peak detection algorithm from the peakutils package.  A relative threshold of 0.80 is employed, such that all peaks that the algorithm detects must have a value of at least 80% of the data's maximum voltage value in order to be considered valid.  From exploratory testing on several of the sample csv files provided in mlp6's Medical-Software-Design repository, this threshold appears to work quite well.  However, it does not account for any vertical offsets that may occur during the course of ECG measurement, which could prove to be an issue for robustness.
 
 Finally, the above metrics are outputted to a JSON file bearing the same name and filepath as the user-inputted csv, barring the extension.
+
+# Travis Build Status Indicator (branch master)
+[![Build Status](https://travis-ci.org/abg28/bme590hrm.svg?branch=master)](https://travis-ci.org/abg28/bme590hrm)
